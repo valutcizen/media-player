@@ -6,13 +6,13 @@ var api = {
   config: {
     name: 'Media Player',
     seek: {
-      forward: [10, 30],
-      backward: [10, 30]
+      forward: [3, 10],
+      backward: [3, 10]
     },
     inactivityTimeout: 4,
     delay: 2,
     repeat: true,
-    playbackRates: [0.5, 1, 1.5, 2, 5]
+    playbackRates: [0.5, 0.75, 1, 1.5, 2, 5]
   }
 };
 if (window.location.search) {

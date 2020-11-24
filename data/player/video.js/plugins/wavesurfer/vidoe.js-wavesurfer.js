@@ -31,7 +31,9 @@
         div.style.opacity = '1';
       });
       div.addEventListener('click', e => {
-        player.currentTime(player.duration() * e.clientX / width);
+        if (!player.paused()) {
+          player.pause();
+        }
       });
       player.on('ready', () => {
         player.el().insertBefore(div, player.controlBar.el());

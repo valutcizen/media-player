@@ -42,7 +42,9 @@
         }, {passive: true});
       }
       document.addEventListener('dblclick', () => {
-        player[player.isFullscreen() ? 'exitFullscreen' : 'requestFullscreen']();
+        if (player.paused()) {
+          player.play();
+        }
       });
     }
   }
